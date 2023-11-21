@@ -1,0 +1,341 @@
+* {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', sans-serif;;
+
+/* //this will stack all the content inside the .hero-section into the center */
+  }
+
+body {
+    /* background-color: black; */
+    font-family: 'Bespoke Serif', serif;
+  }
+  
+
+  /* header */
+
+
+
+
+
+  .walpaper {
+    display: grid;
+     /*  */
+     position: relative;
+     width: 100%;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: url("./images/harley-davidson.jpg") no-repeat center center;
+     background-size: cover;
+     /* bunu demen önemli ortaya getircek */
+     background-position: center;
+     /* z-index: 2; */
+     /* Magic part */
+     background-attachment: fixed;
+  }
+
+  .walpaper:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(-30deg, #ffe801 0%, rgb(87, 78, 78) 100%);
+    opacity: .6;
+    /* z-index: -1;  */
+}
+   
+    
+    .text-container {
+      /* background-color: rgba(black, 65%); */
+      color: lighten(brown, 45%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1em;
+      padding: 3.5rem;
+      text-align: center;
+    }
+    
+    .walpaper h1 {
+      /* font-size: clamp(4rem, 3.875rem + 0.4vw, 5.125rem); */
+      font-weight: 1000;
+      font-size: 600%;
+      letter-spacing: 1.2px;
+      color: #ffe801;
+      z-index: 1;
+
+    }
+    
+    p {
+      line-height: 150%;
+      font-weight: 385;
+      font-size: 200%;
+      color: white;
+    }
+  
+  
+  @media (max-width: 40em) {
+    .walpaper {
+      grid-template-rows: 1fr 1fr;
+    }
+      .banner-img{
+        grid-row: 2;
+      }
+      
+      .text-container {
+        grid-row: 1;
+      }
+      
+    }
+  
+
+    /* LOGOS */
+
+      .logos{
+        margin: 0;
+        padding: 0;
+      }
+      .slide img {
+        width: 100px;
+        height: 100px;
+        animation: scroll 60s linear infinite;
+      }
+      
+      .slide-track {
+        width: 100%;
+        display: flex;
+        gap: 3em;
+        overflow: hidden;
+      }
+      
+      .slider {
+        /* margin-top: 70px; */
+        background-color: white;
+        padding: 1em 0em;
+      }
+      
+      @keyframes scroll {
+        0% {transform: translateX(0);}
+        100% {transform: translatex(-1000%)}
+      }
+
+
+    
+
+
+    /* GLOBAL CSS */
+  
+    .profile { width: 80px;}
+            
+    
+    table { 
+        margin: 0 auto; 
+        border-collapse: collapse; 
+        width: 100%;
+        
+    }
+            
+    td { 
+        padding: 5px; border: 1px solid #666;}
+    
+    
+    tr:first-of-type { 
+        background: #ffe801 ;
+        
+    }
+  
+    table tr th{
+        /* margin: 100px; */
+        padding: 24px;
+        /* font-weight: bold; */
+        font-weight: 600;
+    }
+  
+
+
+    /* FOOTER */
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+ 
+    .row{
+      display: flex;
+    }
+    
+    .footer-section {
+      /* background-image: url(./images/footer_background.jpg); */
+      background: #f2f2f9;
+      background: linear-gradient(to bottom, white, #202020);
+      /* @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css); */
+    }
+    .footer-cta {
+      border-bottom: 1px solid #373636;
+      padding-left: 100px;
+    }
+    .single-cta i {
+      color: #ffe801 ;
+      font-size: 30px;
+      float: left;
+      margin-top: 8px;
+    }
+    .cta-text {
+      display: flex;
+
+      
+      padding-left: 15px;
+      display: inline-block;
+    }
+    .cta-text h4 {
+      color:  #373636;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .cta-text span {
+      color:  #373636;
+      font-size: 15px;
+    }
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+    .footer-pattern img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 330px;
+      background-size: cover;
+      background-position: 100% 100%;
+    }
+    .footer-logo {
+      margin-bottom: 30px;
+    }
+    .footer-logo img {
+        max-width: 200px;
+    }
+    .footer-text p {
+      margin-bottom: 14px;
+      font-size: 14px;
+          color: white;
+      line-height: 28px;
+    }
+    .footer-social-icon span {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+    }
+    .footer-social-icon a {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 15px;
+    }
+    .footer-social-icon i {
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 38px;
+      border-radius: 50%;
+    }
+    .facebook-bg{
+      background: #3B5998;
+    }
+    .twitter-bg{
+      background: #55ACEE;
+    }
+    .google-bg{
+      background: #DD4B39;
+    }
+    .footer-widget-heading h3 {
+      color:  #373636;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .footer-widget-heading h3::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      height: 3px;
+      width: 60px;
+      background: #ffe801;
+    }
+    .footer-widget ul li {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      margin-bottom: 12px;
+      
+    }
+    .footer-widget ul li a:hover{
+      color: #ffe801;
+    }
+    .footer-widget ul li a {
+      color: #373636;
+      text-transform: capitalize;
+      text-decoration: none;
+      
+    }
+    .subscribe-form {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+    .subscribe-form input {
+      width: 100%;
+      padding: 14px 28px;
+      background: #2E2E2E;
+      border: 1px solid #2E2E2E;
+      color: #373636;
+    }
+    .subscribe-form button {
+        position: absolute;
+        right: 0;
+        background: #ffe801;
+        padding: 13px 20px;
+        border: 3px solid #ffe801;
+        top: 0;
+        border-end-end-radius: 20px;
+    }
+    .subscribe-form button i {
+      color: #373636;
+      font-size: 22px;
+      transform: rotate(-6deg);
+    }
+    .copyright-area{
+      background: #202020;
+      padding: 25px 0;
+    }
+    .copyright-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #878787;
+    }
+    .copyright-text p a{
+      color: #ffe801;
+    }
+    .footer-menu li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    .footer-menu li:hover a{
+      color: #ffe801;
+    }
+    .footer-menu li a {
+      font-size: 14px;
+      color: #878787;
+    }
